@@ -1,0 +1,64 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int main (){
+    int dollars{};
+    int quarters{};
+    int dimes{};
+    int nickels{};
+    int pennies{};
+    int amount{};
+    int x{};
+    int a{};
+    int b{};
+    int c{};
+    
+    cout << "Enter a interger" << endl;
+    cin >> amount ;
+    
+    if(amount >=100){
+        dollars = static_cast<int>(amount)/100;
+        x=(amount%100);
+    }
+        else{
+            x=amount;
+        }
+    
+    if (x >= 25 && x <=99){
+        quarters = static_cast<int>(x)/25; 
+        a=(x%25);
+    }
+        else{
+            a=x;
+            }
+    if (a >=10 && a<=24){
+        dimes = static_cast<int>(a)/10;
+        b=(a%10);
+        }
+        else{
+            b=a;
+        }
+    if(b >=5 && b <=9){
+        nickels = static_cast<int>(b)/5;
+        c=(b%5);
+        }
+        else{
+            c=b;}
+        
+    if(c >=0 && c<=4){
+        pennies=static_cast<int>(c)/1;
+    }
+        else{
+            cout << "Irregular amount!" << endl;
+        }
+    cout << "dollars: " << dollars << endl;    
+    cout <<"Quarters: "<< quarters << endl;
+    cout <<"Dimes: "<<dimes << endl;
+    cout << "Nickels: "<<nickels << endl;
+    cout <<"Pennies: " <<pennies << endl;
+    
+    
+    return 0;
+}
